@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-label="Placeholder Eventi">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b28cff"/>
+      <stop offset="100%" stop-color="#7af4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" fill="url(#g3)"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="52" font-family="Segoe UI, Arial" fill="#1a103d">Screenshot Temporaneo #3</text>
+</svg>
