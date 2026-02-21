@@ -1,91 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CocchiCraft | Server Minecraft</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="Sito ufficiale del server Minecraft CocchiCraft: news, screenshot e informazioni per entrare." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero">
-      <nav class="top-nav">
-        <a class="logo" href="index.html">CocchiCraft</a>
-        <div class="nav-links">
-          <a href="index.html" aria-current="page">Home</a>
+      <nav class="navbar container">
+        <div class="logo">⛏️ CocchiCraft</div>
+        <div class="menu">
+          <a href="index.html" class="active">Home</a>
           <a href="news.html">News</a>
         </div>
       </nav>
 
-      <div class="hero-content">
-        <p class="badge">Server Survival • Community • Eventi</p>
-        <h1>Benvenuto su CocchiCraft</h1>
-        <p>
-          Un server Minecraft italiano con avventure, build epiche e una community
-          super attiva. Entra subito e gioca con noi!
+      <section class="hero-content container">
+        <p class="badge">Server Minecraft italiano</p>
+        <h1>Benvenuti su <span>CocchiCraft</span></h1>
+        <p class="subtitle">
+          Un mondo survival con eventi, build epiche e una community super attiva.
+          Preparati a minare, costruire e conquistare il Nether insieme a noi.
         </p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" id="play-button" type="button">Apri Minecraft</button>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="minecraft:/mc.cocchi.lol">Entra nel server</a>
           <a class="btn btn-secondary" href="news.html">Leggi le ultime news</a>
         </div>
-      </div>
+      </section>
     </header>
 
-    <main>
-      <section class="section">
+    <main class="container main-content">
+      <section>
         <h2>Screenshot del server</h2>
-        <p class="section-description">
-          Per ora abbiamo inserito immagini temporanee: appena disponibile il
-          server live le sostituiremo con screenshot reali di mappe, spawn ed eventi.
-        </p>
-
+        <p class="section-intro">Immagini temporanee in attesa degli screenshot ufficiali del nostro mondo.</p>
         <div class="gallery">
-          <article class="card">
-            <img src="assets/placeholder-1.svg" alt="Anteprima temporanea dello spawn" />
-            <h3>Spawn Centrale</h3>
-          </article>
-          <article class="card">
-            <img src="assets/placeholder-2.svg" alt="Anteprima temporanea di una zona survival" />
-            <h3>Zona Survival</h3>
-          </article>
-          <article class="card">
-            <img src="assets/placeholder-3.svg" alt="Anteprima temporanea di un evento speciale" />
-            <h3>Arena Eventi</h3>
-          </article>
+          <img src="https://picsum.photos/seed/minecraft1/800/500" alt="Screenshot temporaneo 1" />
+          <img src="https://picsum.photos/seed/minecraft2/800/500" alt="Screenshot temporaneo 2" />
+          <img src="https://picsum.photos/seed/minecraft3/800/500" alt="Screenshot temporaneo 3" />
         </div>
+      </section>
+
+      <section class="features">
+        <article>
+          <h3>⚔️ Modalità Survival</h3>
+          <p>Economia bilanciata, protezione grief e tante attività per giocare in gruppo.</p>
+        </article>
+        <article>
+          <h3>🏆 Eventi settimanali</h3>
+          <p>Tornei PvP, cacce al tesoro e reward uniche per chi partecipa.</p>
+        </article>
+        <article>
+          <h3>🧱 Build Contest</h3>
+          <p>Mostra la tua creatività e vinci premi esclusivi nel nostro hub principale.</p>
+        </article>
       </section>
     </main>
 
-    <div class="modal-backdrop" id="server-modal" hidden>
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="server-title">
-        <h2 id="server-title">IP Server (placeholder)</h2>
-        <p class="ip-value">mc.placeholder.local</p>
-        <p class="modal-note">Sostituiremo questo indirizzo con quello definitivo al lancio.</p>
-        <button class="btn btn-secondary" id="close-modal" type="button">Chiudi</button>
-      </div>
-    </div>
-
     <footer>
-      <p>© 2026 CocchiCraft • Minecraft server fan page</p>
+      <div class="container footer-inner">
+        <p>© 2026 CocchiCraft • Tutti i diritti riservati</p>
+        <a href="minecraft:/mc.cocchi.lol">minecraft:/mc.cocchi.lol</a>
+      </div>
     </footer>
-
-    <script>
-      const playButton = document.getElementById('play-button');
-      const modal = document.getElementById('server-modal');
-      const closeModal = document.getElementById('close-modal');
-
-      playButton.addEventListener('click', () => {
-        modal.hidden = false;
-      });
-
-      closeModal.addEventListener('click', () => {
-        modal.hidden = true;
-      });
-
-      modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          modal.hidden = true;
-        }
-      });
-    </script>
   </body>
 </html>
